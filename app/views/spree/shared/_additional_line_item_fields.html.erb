@@ -1,3 +1,10 @@
+<%# As per: https://github.com/boomerdigital/solidus_flexi_variants/issues/16#issuecomment-481443359 %>
+
+<% if item.is_a?(Spree::ShippingManifest::ManifestItem) %>
+  <% item = item.line_item %>
+<% end %>
+
+
 <div class='customizations'>
   <%# TODO: group multi-select options (e.g. toppings) %>
   <ul class='list-group list-unstyled'>
